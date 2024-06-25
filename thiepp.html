@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./thiep/box.css">
+    <title>Thiệp Mời | Xác Nhận Tham Dự</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="./thiep/jquery.fancybox.min.css" rel="stylesheet" />
+    <script src="./thiep/jquery.fancybox.min.js"></script>
+    <style>
+        #thiepmoi {
+            display: none;
+            max-height: 99vh;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            /* Giới hạn chiều rộng của popup */
+            overflow: hidden;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-top: 177.78%;
+            /* Tỉ lệ 9:16 */
+        }
+        
+        #ytplayer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .fancybox-button svg {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-container">
+            <!-- <div class="img-top">
+                <img src="./thiep/anh/pic1-04.png" alt="" class="img-top">
+            </div> -->
+            <div class="box-top">
+                <a data-fancybox data-src="#thiepmoi" href="javascript:;" class="btn btn-primary">
+                <img src="./thiep/anh/IMG_1101.GIF" alt="" class="img-top"></a>
+
+                <img src="./thiep/anh/hk-04.png" alt="" class="img-top1">
+                <!-- <label for="" class="lb-top2">CÔNG HUÂN & PHƯƠNG KHANH</label> -->
+                <div class="box-btn">
+                    <div class="row">
+                        <a href="#" id="mySizeChart"><img src="./thiep/anh/thoigian-04.png" alt="" class="img-btn"></a>
+                        <a href="https://maps.app.goo.gl/EXeJjyeYwKFKP9kV8" target="_blank">
+                            <img src="./thiep/anh/bando-04.png" alt="" class="img-btn"></a>
+                            <a href="./xacnhan.html" target="_blank" class="centered">
+                                <img src="./thiep/anh/xacnhan-04.png" alt="" class="img-btn"></a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="box">
+                <!-- <div class="box-qr"> -->
+                    <!-- <a href="#" id="mySizeChart"><img src="./thiep/anh/3787564.png" alt="" class="img-box"></a> -->
+                    <div id="mySizeChartModal" class="ebcf_modal">
+
+                    <div class="ebcf_modal-content">
+                        <span class="ebcf_close">&times;</span>
+                        <div class="box-content">
+                            <img src="./thiep/anh/nhahang-04.png" alt="" class="img-cnt1">
+                            <label for="" class="lb-cnt2">45 LÊ LỢI, TP. HUẾ</label>
+                            <label for="" class="lb-cnt3">11H30 | THỨ HAI | 12.08.2024</label>
+                            <img src="./thiep/anh/IMG_10755.PNG" alt="" class="img-cnt">
+                        </div>
+
+                    </div>
+
+                <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none;padding:0;" id="thiepmoi">
+        <div class="video-container">
+            <iframe id="ytplayer" type="text/html" 
+                src="https://www.youtube.com/embed/FxDkellGhMU?autoplay=1&mute=0&start=1" 
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+    </div>
+    </div>
+    <script>
+        // Get the modal
+        var ebModal = document.getElementById('mySizeChartModal');
+
+        // Get the button that opens the modal
+        var ebBtn = document.getElementById("mySizeChart");
+
+        // Get the <span> element that closes the modal
+        var ebSpan = document.getElementsByClassName("ebcf_close")[0];
+
+        // When the user clicks the button, open the modal 
+        ebBtn.onclick = function() {
+            ebModal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        ebSpan.onclick = function() {
+            ebModal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == ebModal) {
+                ebModal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
